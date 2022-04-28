@@ -5,10 +5,12 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import RegisterPage from "./Components/Registration/RegisterPage";
 import "bootstrap/dist/css/bootstrap.min.css";
+import HomePage from "./Components/Home/HomePage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
+        <HomePage></HomePage>
         <RegisterPage></RegisterPage>
     </React.StrictMode>
 );

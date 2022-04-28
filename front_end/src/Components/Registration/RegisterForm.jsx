@@ -4,7 +4,7 @@ export default function RegisterForm() {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-6">
-                        <form action="http://127.0.0.1:8000/action" method="post">
+                        <form action="http://127.0.0.1:8000/register" method="post">
                             <div className="mb-4">
                                 <label for="FirstName" className="form-label fw-normal h5">
                                     First Name
