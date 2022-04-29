@@ -26,7 +26,7 @@ export default function RegisterForm() {
                                     className="form-control"
                                     id="exampleInputEmail1"
                                     aria-describedby="emailHelp"
-                                    name="fist_name"
+                                    name="last_name"
                                 />
                             </div>
                             <div className="mb-4">
@@ -38,30 +38,23 @@ export default function RegisterForm() {
                                     className="form-control"
                                     id="Date-of-birth"
                                     aria-describedby="emailHelp"
-                                    name="DateOfBirth"
+                                    name="date_of_birth"
                                 />
                             </div>
                             <div className="mb-4">
                                 <label for="LastName" className="form-label fw-normal h5">
                                     Address
                                 </label>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    id="Date-of-birth"
-                                    aria-describedby="emailHelp"
-                                    name="DateOfBirth"
-                                />
+                                <input type="text" className="form-control" id="Date-of-birth" aria-describedby="emailHelp" name="adress" />
                             </div>
                             <div className="mb-4">
                                 <label for="LastName" className="form-label fw-normal h5">
                                     City
                                 </label>
-                                <select className="form-select" aria-label="Default select example">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                <select className="form-select" aria-label="Default select example" name="city">
+                                    <option selected>One</option>
+                                    <option value="">Two</option>
+                                    <option value="">Three</option>
                                 </select>
                             </div>
                             <div className="mb-4">
@@ -73,7 +66,7 @@ export default function RegisterForm() {
                                     className="form-control"
                                     id="Date-of-birth"
                                     aria-describedby="emailHelp"
-                                    name="DateOfBirth"
+                                    name="zip_code"
                                 />
                             </div>
                             <div className="mb-4">
@@ -85,7 +78,7 @@ export default function RegisterForm() {
                                     className="form-control"
                                     id="Date-of-birth"
                                     aria-describedby="emailHelp"
-                                    name="DateOfBirth"
+                                    name="land_line"
                                 />
                             </div>
                             <div className="mb-4">
@@ -97,11 +90,11 @@ export default function RegisterForm() {
                                     className="form-control"
                                     id="Date-of-birth"
                                     aria-describedby="emailHelp"
-                                    name="DateOfBirth"
+                                    name="cellular_phone"
                                 />
                             </div>
                             <div className="mb-4 form-check">
-                                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                <input type="checkbox" className="form-check-input" id="exampleCheck1" name="been_infected" />
                                 <label className="form-check-label" for="exampleCheck1">
                                     Have been infected by COVID-19 before
                                 </label>
@@ -157,8 +150,8 @@ export default function RegisterForm() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="mx-auto ">
-                                <button type="submit" className="btn btn-primary">
+                            <div className="mx-auto my-4 text-center">
+                                <button type="submit" className="btn-lg btn-primary">
                                     Submit
                                 </button>
                             </div>
