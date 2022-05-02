@@ -18,13 +18,18 @@ export default function HomePage() {
                             <div className="card border border-5">
                                 <div className="card-body">
                                     <h5 className="card-title fw-bold">About Us</h5>
-                                    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <p className="card-text lead">
+                                        we help undeveloped countries vaccinate their people! <br />
+                                        Some countries do not keep electronic records of their <br />
+                                        citizens medical situation. We want to help them collect <br />
+                                        data from citizens in order to prioritise COVID-19 vaccination.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="row justify-content-center">
-                        <div className="col-sm-4">
+                    <div className="row justify-content-center my-4">
+                        <div className="col-6">
                             <div className="card border border-5 border">
                                 <div className="card-body">
                                     <h5 className="card-title fw-bold">Study Journey</h5>
@@ -33,20 +38,22 @@ export default function HomePage() {
                                         Tutorials, installations,…) i've used for learning.
                                     </p>
                                     <div className="text-center">
-                                        <a href="#" className="btn btn-primary">
+                                        <a href="#" className="btn btn-primary border border-5 border-info">
                                             Go To Study Journey
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-4 col-12">
+                    </div>
+                    <div className="row justify-content-center my-4">
+                        <div className="col-6">
                             <div className="card border border-5">
                                 <div className="card-body">
                                     <h5 className="card-title fw-bold">Summary Page</h5>
                                     <p className="card-text lead">A tabular view that shows all the existing registration info available</p>
                                     <div className="text-center">
-                                        <a href="#" className="btn btn-primary">
+                                        <a href="#" className="btn btn-primary border border-5 border-info">
                                             Go To Summary Page
                                         </a>
                                     </div>
