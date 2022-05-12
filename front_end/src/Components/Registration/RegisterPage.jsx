@@ -1,11 +1,12 @@
+import Navbar from "../NavBar/Navbar";
 import RegisterForm from "./RegisterForm";
-import RegistrPageHeader from "./RegistrPageHeader";
+import RegisterPageHeader from "./RegisterPageHeader";
 
 export default function RegisterPage() {
-    return (
-        <>
-            <RegistrPageHeader></RegistrPageHeader>
-            <RegisterForm></RegisterForm>
-        </>
-    );
+  return (
+    <>
+      <RegisterPageHeader></RegisterPageHeader>
+      <RegisterForm></RegisterForm>
+    </>
+  );
 }
