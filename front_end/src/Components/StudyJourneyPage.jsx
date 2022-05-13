@@ -10,8 +10,9 @@ export default function StudyJourneyPage() {
           </div>
         </div>
       </header>
+
       <main>
-        <div className="container my-4">
+        <div className="container-fluid my-4">
           <div className="row justify-content-center">
             <div className="col-6">
               <p className="lead">
@@ -20,33 +21,136 @@ export default function StudyJourneyPage() {
               </p>
             </div>
           </div>
+
+
           <div className="row justify-content-center mt-3">
             <div className="col-6">
-              <h4 className='text-primary'>Learning basic python</h4>
+              <h3 className='text-primary text-decoration-underline'>Learning basic python</h3>
               <p className="lead">
                 Django is a python framework. <br/>
                 So, before jumping strait to learn Django, i had to study python.
-                I've studied Python from docs i've found on google and watching Youtube videos and courses.
+                I've studied Python from documentation i've found on google and watching Youtube videos and courses.
               </p>
-              <h5 className="text-info">Docs</h5>
-              <ul className='list' style={{}}>
+              <h5 className="text-info">Documentation</h5>
+              <ul className='list' style={{ listStyleType:'none' }}>
                 <li className="my-3">
-                  <a href="https://devdocs.io/python~3.10/">https://devdocs.io/python~3.10/</a>
-                </li>
-                <li>
                   <a href="https://devdocs.io/python~3.10/">https://devdocs.io/python~3.10/</a>
                 </li>
               </ul>
               <h5 className="text-info mt-4">Youtube</h5>
-              <ul>
+              <ul className='list' style={{ listStyleType:'none' }}>
                 <li>
-                  <p className="my-0">Python Tutorial - Python Full Course for Beginners</p>
-                  <p>Link to the course - <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc&t=11082s">Python Full Course for Beginners </a></p>
+                  <p className="lead">This course is very good for those who are just begging learning python and also want to gain deeper understand in python.</p>
+                  <div className="card" style={{ width: "18rem" }}>
+                    <img src="./Images/moshe_python.jpg" className="card-img-top" alt="Python course image" />
+                    <div className="card-body">
+                      <p className="card-title lead fw-bold">Python Tutorial - Python Full Course for Beginners</p>
+                      <p className="fw-light">Python tutorial - Python full course for beginners - Go from Zero to Hero with Python (includes machine learning & web development projects).</p>
+                      <dov className="row text-center">
+                        <div className="col">
+                          <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc&t=11082s" className="btn btn-primary">Go To Course on YouTube</a>
+                        </div>
+                      </dov>
+                    </div>
+                  </div>
                 </li>
-
               </ul>
             </div>
           </div>
+
+
+          <div className="row justify-content-center mt-5">
+            <div className="col-6">
+              <h3 className='text-primary text-decoration-underline'>Learning React</h3>
+              <p className="lead">
+                I had a basic knowledge in react SPA framework so after watching the great course of python in the youtube channel Programming with Mosh.
+                I've decided to learn react in more depth by viewing another course of mosh about react and by reading a book "The Road to React".
+                I've learned a lot from this course and the book.
+              </p>
+              <h5 className="text-info">Book</h5>
+              <ul className='list' style={{ listStyleType:'none' }}>
+                <li>
+                  <p>Link to the book - <a href="https://sd.blackball.lv/library/The_Road_to_React_(2020).pdf">The Road To React</a> </p>
+                </li>
+              </ul>
+              <h5 className="text-info mt-4">Youtube</h5>
+              <ul className='list' style={{ listStyleType:'none' }}>
+                <li>
+                  <p className="lead">
+                    Mosh goes in depth and explains not only about programming in react but also about how react works behind the sense.
+                    This knowledge made me a better programmer in react so i hope it will make you too!
+                  </p>
+                  <div className="card" style={{ width: "18rem" }}>
+                    <img src="./Images/mosh_react.jpg" className="card-img-top" alt="Python course image" />
+                    <div className="card-body">
+                      <p className="card-title lead fw-bold">React JS - React Tutorial for Beginners</p>
+                      <p className="fw-light">React JS Tutorial - Get up & running with React JS: the most popular JavaScript library in the world! </p>
+                      <dov className="row text-center">
+                        <div className="col">
+                          <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc&t=11082s" className="btn btn-primary">Go To Course on YouTube</a>
+                        </div>
+                      </dov>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="row justify-content-center mt-5">
+            <div className="col-6">
+              <h3 className='text-primary text-decoration-underline'>Learning Django</h3>
+              <p className="lead">
+                I had zero knowledge in django.
+                I found some free courses and videos on youtube that gave me all the knowledge i need to complete the task (and even more) and
+                a perfect documentation of how to create and sync postgres sql Database with django.
+                I've also used the "Django documentation" website when i got stuck.
+              </p>
+              <h5 className="text-info">Documentation</h5>
+              <ul className='list' style={{ listStyleType:'none' }}>
+                <li className="my-3">
+                  <a href="https://docs.djangoproject.com/en/4.0/">Django documentation</a>
+                </li>
+                <li className="my-3">
+                  <a href="https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8">How to Start Django Project with a Database(PostgreSQL)</a>
+                </li>
+              </ul>
+              <h5 className="text-info mt-4">Youtube</h5>
+              <ul className='list' style={{ listStyleType:'none' }}>
+                <li>
+                  <p className="lead mt-4">Course that gives basic understanding of Django</p>
+                  <div className="card" style={{ width: "18rem" }}>
+                    <img src="./Images/django_course.jpg" className="card-img-top" alt="Python course image" />
+                    <div className="card-body">
+                      <p className="card-title fw-light">Build a discord-like application with Python Django.</p>
+                      <p className="fw-light"></p>
+                      <dov className="row text-center">
+                        <div className="col">
+                          <a href="https://youtu.be/PtQiiknWUcI" className="btn btn-primary">Go To Course on YouTube</a>
+                        </div>
+                      </dov>
+                    </div>
+                  </div>
+                </li>
+                <li className="mt-4">
+                  <p className="lead">Connect postgresql with django</p>
+                  <div className="card" style={{ width: "18rem" }}>
+                    <img src="./Images/connect.png" className="card-img-top" alt="Python course image" />
+                    <div className="card-body">
+                      <p className="card-title fw-light">How to Connect PostgresSQL Database with Django Project</p>
+                      <p className="fw-light"></p>
+                      <dov className="row text-center">
+                        <div className="col">
+                          <a href="https://youtu.be/dYDoGHV-9hY" className="btn btn-primary">Go To YouTube</a>
+                        </div>
+                      </dov>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </main>
     </>
