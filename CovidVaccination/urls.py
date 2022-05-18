@@ -17,17 +17,10 @@ from re import template
 from django.contrib import admin
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.urls import path
-from django.views.generic import TemplateView
+from django.urls import path, include
 
-def handleRegister(req):
-    if req.method == 'POST':
-        print(req.POST)
-        
-    return render(req, 'index.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html')),
-    path('register', handleRegister, name="register")
+    path('', include('RegistrationForm.urls'))
 ]
