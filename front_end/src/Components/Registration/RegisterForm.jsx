@@ -14,7 +14,7 @@ export default function RegisterForm() {
                                     className="form-control"
                                     id="exampleInputEmail1"
                                     aria-describedby="emailHelp"
-                                    name="fist_name"
+                                    name="first_name"
                                 />
                             </div>
                             <div className="mb-4">
@@ -45,7 +45,7 @@ export default function RegisterForm() {
                                 <label for="LastName" className="form-label fw-normal h5">
                                     Address
                                 </label>
-                                <input type="text" className="form-control" id="Date-of-birth" aria-describedby="emailHelp" name="adress" />
+                                <input type="text" className="form-control" id="Date-of-birth" aria-describedby="emailHelp" name="address" />
                             </div>
                             <div className="mb-4">
                                 <label for="LastName" className="form-label fw-normal h5">
@@ -94,7 +94,7 @@ export default function RegisterForm() {
                                 />
                             </div>
                             <div className="mb-4 form-check">
-                                <input type="checkbox" className="form-check-input" id="exampleCheck1" name="been_infected" />
+                                <input type="checkbox" className="form-check-input" id="exampleCheck1" name="been_infected"/>
                                 <label className="form-check-label" for="exampleCheck1">
                                     Have been infected by COVID-19 before
                                 </label>
@@ -106,43 +106,43 @@ export default function RegisterForm() {
                                 <div className="card">
                                     <div className="card-body border-3 border border-3 rounded-3">
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="diabetes"/>
                                             <label className="form-check-label" for="exampleCheck1">
                                                 Diabetes
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name='Cardio_Vascular'/>
                                             <label className="form-check-label" for="exampleCheck1">
                                                 Cardio-Vascular problems
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="cancer"/>
                                             <label className="form-check-label" for="exampleCheck1">
                                                 Cancer
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="obesity"/>
                                             <label className="form-check-label" for="exampleCheck1">
                                                 Obesity
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="MRSA"/>
                                             <label className="form-check-label" for="exampleCheck1">
                                                 MRSA
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="cholesterol"/>
                                             <label className="form-check-label" for="exampleCheck1">
                                                 Cholesterol
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="high_blood_pressure"/>
                                             <label className="form-check-label" for="exampleCheck1">
                                                 High Blood Pressure
                                             </label>

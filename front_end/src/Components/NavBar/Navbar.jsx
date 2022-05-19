@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light p-3 lead fw-bold">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light p-3 lead fw-bold border border-light border-4">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             Home

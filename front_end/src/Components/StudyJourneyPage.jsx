@@ -1,3 +1,8 @@
+import django_course from '../Images/django_course.jpg'
+import connect from '../Images/connect.png'
+import mosh_react from '../Images/mosh_react.jpg'
+import moshe_python from '../Images/moshe_python.jpg'
+
 export default function StudyJourneyPage() {
   return (
     <>
@@ -16,7 +21,7 @@ export default function StudyJourneyPage() {
           <div className="row justify-content-center">
             <div className="col-6">
               <p className="lead">
-                Here i explain my study journey including my previous knowledge and what are the resources (YouTube, Tutorials, installations,…) i've used for
+                Here I explain my study journey including my previous knowledge and what are the resources (YouTube, Tutorials, installations,…) i've used for
                 learning.
               </p>
             </div>
@@ -42,7 +47,7 @@ export default function StudyJourneyPage() {
                 <li>
                   <p className="lead">This course is very good for those who are just begging learning python and also want to gain deeper understand in python.</p>
                   <div className="card" style={{ width: "18rem" }}>
-                    <img src="./Images/moshe_python.jpg" className="card-img-top" alt="Python course image" />
+                    <img src={moshe_python} className="card-img-top" alt="Python course image" />
                     <div className="card-body">
                       <p className="card-title lead fw-bold">Python Tutorial - Python Full Course for Beginners</p>
                       <p className="fw-light">Python tutorial - Python full course for beginners - Go from Zero to Hero with Python (includes machine learning & web development projects).</p>
@@ -81,7 +86,7 @@ export default function StudyJourneyPage() {
                     This knowledge made me a better programmer in react so i hope it will make you too!
                   </p>
                   <div className="card" style={{ width: "18rem" }}>
-                    <img src="./Images/mosh_react.jpg" className="card-img-top" alt="Python course image" />
+                    <img src={mosh_react} className="card-img-top" alt="Python course image" />
                     <div className="card-body">
                       <p className="card-title lead fw-bold">React JS - React Tutorial for Beginners</p>
                       <p className="fw-light">React JS Tutorial - Get up & running with React JS: the most popular JavaScript library in the world! </p>
@@ -120,7 +125,7 @@ export default function StudyJourneyPage() {
                 <li>
                   <p className="lead mt-4">Course that gives basic understanding of Django</p>
                   <div className="card" style={{ width: "18rem" }}>
-                    <img src="./Images/django_course.jpg" className="card-img-top" alt="Python course image" />
+                    <img src={django_course} className="card-img-top" alt="Python course image" />
                     <div className="card-body">
                       <p className="card-title fw-light">Build a discord-like application with Python Django.</p>
                       <p className="fw-light"></p>
@@ -135,7 +140,7 @@ export default function StudyJourneyPage() {
                 <li className="mt-4">
                   <p className="lead">Connect postgresql with django</p>
                   <div className="card" style={{ width: "18rem" }}>
-                    <img src="./Images/connect.png" className="card-img-top" alt="Python course image" />
+                    <img src={connect} className="card-img-top" alt="Python course image" />
                     <div className="card-body">
                       <p className="card-title fw-light">How to Connect PostgresSQL Database with Django Project</p>
                       <p className="fw-light"></p>
@@ -150,7 +155,6 @@ export default function StudyJourneyPage() {
               </ul>
             </div>
           </div>
-
         </div>
       </main>
     </>
