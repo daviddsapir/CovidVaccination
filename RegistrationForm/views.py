@@ -21,31 +21,38 @@ def handleRegister(request):
             print(request.POST["been_infected"])
 
         # Other conditions
+        other_conditions = ""
         if "diabetes" in request.POST:
-            print(request.POST["diabetes"])
+            other_conditions += request.POST["diabetes"]
 
         if "Cardio_Vascular" in request.POST:
-            print(request.POST["Cardio_Vascular"])
+            other_conditions += request.POST["Cardio_Vascular"]
 
         if "cancer" in request.POST:
-            print(request.POST["cancer"])
+            other_conditions += request.POST["cancer"]
 
         if "obesity" in request.POST:
-            print(request.POST["obesity"])
+            other_conditions += request.POST["obesity"]
 
         if "MRSA" in request.POST:
-            print(request.POST["MRSA"])
+            other_conditions += request.POST["MRSA"]
 
         if "cholesterol" in request.POST:
-            print(request.POST["cholesterol"])    
+            other_conditions += request.POST["cholesterol"]  
 
         if "high_blood_pressure" in request.POST:
-            print(request.POST["high_blood_pressure"])
-        
-        # print(first_name)
-        # row = RegisterForm(
-        #     first_name=first_name
+            other_conditions += request.POST["high_blood_pressure"]
+
+        RegisterForm(
+            first_name=first_name,
+            last_name=last_name,
+            date_of_birth=date_of_birth,
+            address=address,
+            city=city,
+            zip_code=zip_code,
+            land_line=land_line,
+            cellular_phone=cellular_phone,
             
-        #     ).save()
+            ).save()
         
     return render(request, 'index.html')
