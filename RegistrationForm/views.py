@@ -52,7 +52,6 @@ def handleRegister(request):
             zip_code=zip_code,
             land_line=land_line,
             cellular_phone=cellular_phone,
-            
             ).save()
         
     return render(request, 'index.html')
