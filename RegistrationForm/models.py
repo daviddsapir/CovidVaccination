@@ -11,5 +11,5 @@ class RegisterForm(models.Model):
     zip_code  = models.CharField(max_length=80)
     land_line = models.CharField(max_length=20)
     cellular_phone = models.CharField(max_length=20)
-    infected_before = models.BooleanField()
+    infected_before = models.BooleanField(False)
     other_conditions = models.CharField(max_length=255)

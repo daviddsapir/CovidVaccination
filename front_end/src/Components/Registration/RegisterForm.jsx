@@ -1,11 +1,12 @@
 import { useState } from "react";
+import axios from "axios";
 
 export default function RegisterForm() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [dateOfBirth, setDateOfBirth] = useState("");
     const [address, setAddress] = useState("");
-    const [city, setCity] = useState("");
+    const [city, setCity] = useState("one");
     const [zipCode, setZipCode] = useState("");
     const [landLine, setLandLine] = useState("");
     const [cellularPhone, setCellularPhone] = useState("");
@@ -41,7 +42,6 @@ export default function RegisterForm() {
     }
 
     function renderErrorMessage(isEmpty) {
-        console.log(isEmpty);
         if (isEmpty) {
             return (
                 <>
@@ -65,6 +65,7 @@ export default function RegisterForm() {
     function handleFormSubmit() {
         initFromValidation();
         handleEmptyFields();
+        // axios()
     }
 
     return (
@@ -72,7 +73,7 @@ export default function RegisterForm() {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-6">
-                        <form action="http://127.0.0.1:8000/register" method="post">
+                        <form action="/register" method="post">
                             <div className="mb-4">
                                 <label for="FirstName" className="form-label fw-normal h5">
                                     First Name
@@ -154,9 +155,9 @@ export default function RegisterForm() {
                                             setCity(value);
                                         }}
                                 >
-                                    <option selected>One</option>
-                                    <option value="">Two</option>
-                                    <option value="">Three</option>
+                                    <option selected value="One">One</option>
+                                    <option value="Two">Two</option>
+                                    <option value="Three">Three</option>
                                 </select>
                                 {renderErrorMessage(isCityEmpty)}
                             </div>

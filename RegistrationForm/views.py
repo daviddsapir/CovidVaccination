@@ -43,6 +43,8 @@ def handleRegister(request):
         if "high_blood_pressure" in request.POST:
             other_conditions += request.POST["high_blood_pressure"]
 
+        print(f"other_conditions --> {other_conditions}")
+
         RegisterForm(
             first_name=first_name,
             last_name=last_name,
@@ -53,5 +55,5 @@ def handleRegister(request):
             land_line=land_line,
             cellular_phone=cellular_phone,
             ).save()
-        
+
     return render(request, 'index.html')
