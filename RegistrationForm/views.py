@@ -4,46 +4,80 @@ from .models import RegisterForm
 
 # Create your views here.
 def handleRegister(request):
+
     if request.method == 'POST':
 
         # Mandatory form fields
-        first_name = request.POST["first_name"]
-        last_name = request.POST["last_name"]
-        date_of_birth = request.POST["date_of_birth"]
-        address = request.POST["address"]
-        city = request.POST["city"]
-        zip_code = request.POST["zip_code"]
-        land_line = request.POST["land_line"]
-        cellular_phone = request.POST["cellular_phone"]
+
+        # 1
+        if "first_name" in request.POST:
+            first_name = request.POST["first_name"]
+
+        # 2
+        if "last_name" in request.POST:
+            last_name = request.POST["last_name"]
+
+        # 3
+        if "date_of_birth" in request.POST:
+            date_of_birth = request.POST["date_of_birth"]
+        
+        # 4
+        if "address" in request.POST:
+            address = request.POST["address"]
+
+        # 5
+        if "city" in request.POST:
+            city = request.POST["city"]
+
+        # 6
+        if "zip_code" in request.POST:  
+            zip_code = request.POST["zip_code"]
+
+        # 7
+        if "land_line" in request.POST:
+            land_line = request.POST["land_line"]
+
+        # 8
+        if "cellular_phone" in request.POST:  
+            cellular_phone = request.POST["cellular_phone"]
 
         # Have been infected by COVID-19 before
+        # 9
         if "been_infected" in request.POST:
-            print(request.POST["been_infected"])
+            been_infected = True
+        else:
+            been_infected = False
 
         # Other conditions
-        other_conditions = ""
+        other_conditions = []
+
+        # 10
         if "diabetes" in request.POST:
-            other_conditions += request.POST["diabetes"]
-
+            other_conditions.append('diabetes')
+        
+        # 11
         if "Cardio_Vascular" in request.POST:
-            other_conditions += request.POST["Cardio_Vascular"]
+            other_conditions.append('Cardio_Vascular')
 
+        # 12
         if "cancer" in request.POST:
-            other_conditions += request.POST["cancer"]
+            other_conditions.append('cancer')
 
+        # 13
         if "obesity" in request.POST:
-            other_conditions += request.POST["obesity"]
+            other_conditions.append('obesity')
 
+        # 14
         if "MRSA" in request.POST:
-            other_conditions += request.POST["MRSA"]
+            other_conditions.append('MRSA')
 
+        # 14
         if "cholesterol" in request.POST:
-            other_conditions += request.POST["cholesterol"]  
+            other_conditions.append('cholesterol')
 
+        # 15
         if "high_blood_pressure" in request.POST:
-            other_conditions += request.POST["high_blood_pressure"]
-
-        print(f"other_conditions --> {other_conditions}")
+            other_conditions.append('high_blood_pressure')
 
         RegisterForm(
             first_name=first_name,
@@ -54,6 +88,8 @@ def handleRegister(request):
             zip_code=zip_code,
             land_line=land_line,
             cellular_phone=cellular_phone,
+            been_infected = been_infected,
+            other_conditions=", ".join(other_conditions),
             ).save()
 
     return render(request, 'index.html')
