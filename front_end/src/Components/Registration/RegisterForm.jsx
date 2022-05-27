@@ -21,6 +21,8 @@ export default function RegisterForm() {
     const [isLandLineEmpty, setIsLandLineEmpty] = useState(false);
     const [isCellularPhoneEmpty, setIsCellularPhoneEmpty] = useState(false);
 
+    const [formIsValid, setFormIsValid] = useState(true)
+
 
     function handleEmptyFields() {
         handleEmptyField(firstName, setIsFirstNameEmpty);
@@ -35,6 +37,7 @@ export default function RegisterForm() {
 
     function handleEmptyField(value, setFunction) {
         if (value === "") {
+            setFormIsValid(false);
             setFunction(true);
         } else {
             setFunction(false);
@@ -60,12 +63,15 @@ export default function RegisterForm() {
         setIsZipCodeEmpty(false);
         setIsLandLineEmpty(false);
         setIsCellularPhoneEmpty(false);
+        setFormIsValid(true);
     }
 
-    function handleFormSubmit() {
+    function handleFormSubmit(ev) {
         initFromValidation();
         handleEmptyFields();
-        axios()
+        if (!formIsValid) {
+            ev.preventDefault()
+        }
     }
 
     return (
@@ -73,9 +79,9 @@ export default function RegisterForm() {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-6">
-                        <form action="http://127.0.0.1:8000/register" method="post">
+                        <form action="http://localhost:8000/register" method="post">
                             <div className="mb-4">
-                                <label for="FirstName" className="form-label fw-normal h5">
+                                <label htmlFor="FirstName" className="form-label fw-normal h5">
                                     First Name
                                 </label>
                                 <input
@@ -93,7 +99,7 @@ export default function RegisterForm() {
                             </div>
 
                             <div className="mb-4">
-                                <label for="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="LastName" className="form-label fw-normal h5">
                                     Last Name
                                 </label>
                                 <input
@@ -110,7 +116,7 @@ export default function RegisterForm() {
                                 {renderErrorMessage(isLastNameEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label for="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="LastName" className="form-label fw-normal h5">
                                     Date of birth
                                 </label>
                                 <input
@@ -127,7 +133,7 @@ export default function RegisterForm() {
                                 {renderErrorMessage(isDateOfBirthEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label for="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="LastName" className="form-label fw-normal h5">
                                     Address
                                 </label>
                                 <input
@@ -144,7 +150,7 @@ export default function RegisterForm() {
                                 {renderErrorMessage(isAddressEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label for="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="LastName" className="form-label fw-normal h5">
                                     City
                                 </label>
                                 <select className="form-select"
@@ -155,14 +161,14 @@ export default function RegisterForm() {
                                             setCity(value);
                                         }}
                                 >
-                                    <option selected value="One">One</option>
+                                    <option defaultValue="One">One</option>
                                     <option value="Two">Two</option>
                                     <option value="Three">Three</option>
                                 </select>
                                 {renderErrorMessage(isCityEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label for="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="LastName" className="form-label fw-normal h5">
                                     Zip code
                                 </label>
                                 <input
@@ -179,7 +185,7 @@ export default function RegisterForm() {
                                 {renderErrorMessage(isZipCodeEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label for="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="LastName" className="form-label fw-normal h5">
                                     Land line
                                 </label>
                                 <input
@@ -196,7 +202,7 @@ export default function RegisterForm() {
                                 {renderErrorMessage(isLandLineEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label for="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="LastName" className="form-label fw-normal h5">
                                     Cellular phone
                                 </label>
                                 <input
@@ -214,49 +220,49 @@ export default function RegisterForm() {
                             </div>
                             <div className="mb-4 form-check">
                                 <input type="checkbox" className="form-check-input" id="exampleCheck1" name="been_infected" />
-                                <label className="form-check-label" for="exampleCheck1">
+                                <label className="form-check-label" htmlFor="exampleCheck1">
                                     Have been infected by COVID-19 before
                                 </label>
                             </div>
                             <div className="mb-4">
-                                <label for="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="LastName" className="form-label fw-normal h5">
                                     Other conditions
                                 </label>
                                 <div className="card">
                                     <div className="card-body border-3 border border-3 rounded-3">
                                         <div className="mb-3 form-check">
                                             <input type="checkbox" className="form-check-input" id="exampleCheck1" name="diabetes" />
-                                            <label className="form-check-label" for="exampleCheck1">
+                                            <label className="form-check-label" htmlFor="exampleCheck1">
                                                 Diabetes
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
                                             <input type="checkbox" className="form-check-input" id="exampleCheck1" name="Cardio_Vascular" />
-                                            <label className="form-check-label" for="exampleCheck1">
+                                            <label className="form-check-label" htmlFor="exampleCheck1">
                                                 Cardio-Vascular problems
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
                                             <input type="checkbox" className="form-check-input" id="exampleCheck1" name="cancer" />
-                                            <label className="form-check-label" for="exampleCheck1">
+                                            <label className="form-check-label" htmlFor="exampleCheck1">
                                                 Cancer
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
                                             <input type="checkbox" className="form-check-input" id="exampleCheck1" name="obesity" />
-                                            <label className="form-check-label" for="exampleCheck1">
+                                            <label className="form-check-label" htmlFor="exampleCheck1">
                                                 Obesity
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
                                             <input type="checkbox" className="form-check-input" id="exampleCheck1" name="MRSA" />
-                                            <label className="form-check-label" for="exampleCheck1">
+                                            <label className="form-check-label" htmlFor="exampleCheck1">
                                                 MRSA
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
                                             <input type="checkbox" className="form-check-input" id="exampleCheck1" name="cholesterol" />
-                                            <label className="form-check-label" for="exampleCheck1">
+                                            <label className="form-check-label" htmlFor="exampleCheck1">
                                                 Cholesterol
                                             </label>
                                         </div>
@@ -267,7 +273,7 @@ export default function RegisterForm() {
                                                 id="exampleCheck1"
                                                 name="high_blood_pressure"
                                             />
-                                            <label className="form-check-label" for="exampleCheck1">
+                                            <label className="form-check-label" htmlFor="exampleCheck1">
                                                 High Blood Pressure
                                             </label>
                                         </div>
@@ -275,15 +281,15 @@ export default function RegisterForm() {
                                 </div>
                             </div>
                             <div className="mx-auto my-4 text-center">
-                                <div
+                                <button
                                     type="submit"
                                     className="btn-lg btn-primary"
                                     onClick={(ev) => {
-                                        handleFormSubmit();
+                                        handleFormSubmit(ev);
                                     }}
                                 >
                                     Submit
-                                </div>
+                                </button>
                             </div>
                         </form>
                     </div>
