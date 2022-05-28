@@ -1,8 +1,26 @@
 from atexit import register
-from django.shortcuts import render
+import json
+from django.shortcuts import redirect, render
 from .models import RegisterForm
+from django.shortcuts import redirect
+from django.http import JsonResponse
 
-# Create your views here.
+def handleFetchFormResults(request):
+
+    data = RegisterForm.objects.all()
+    
+    for row in data:
+        print(row.first_name)
+
+    responseData = {
+        'id': 4,
+        'name': 'Test Response',
+        'roles' : ['Admin','User']
+    }
+
+    return JsonResponse(responseData)
+
+
 def handleRegister(request):
 
     if request.method == 'POST':
@@ -44,9 +62,9 @@ def handleRegister(request):
         # Have been infected by COVID-19 before
         # 9
         if "been_infected" in request.POST:
-            been_infected = True
+            infected_before = True
         else:
-            been_infected = False
+            infected_before = False
 
         # Other conditions
         other_conditions = []
@@ -78,7 +96,7 @@ def handleRegister(request):
         # 15
         if "high_blood_pressure" in request.POST:
             other_conditions.append('high_blood_pressure')
-
+            
         other_conditions=", ".join(other_conditions)
         print(other_conditions)
 
@@ -91,8 +109,10 @@ def handleRegister(request):
             zip_code=zip_code,
             land_line=land_line,
             cellular_phone=cellular_phone,
-            been_infected = been_infected,
+            infected_before = infected_before,
             other_conditions=other_conditions
             ).save()
+
+        return redirect('/SummaryPage')
 
     return render(request, 'index.html')

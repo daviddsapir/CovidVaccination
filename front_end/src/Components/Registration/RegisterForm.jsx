@@ -11,7 +11,6 @@ export default function RegisterForm() {
     const [landLine, setLandLine] = useState("");
     const [cellularPhone, setCellularPhone] = useState("");
 
-
     const [isFirstNameEmpty, setIsFirstNameEmpty] = useState(false);
     const [isLastNameEmpty, setIsLastNameEmpty] = useState(false);
     const [isDateOfBirthEmpty, setIsDateOfBirthEmpty] = useState(false);
@@ -21,25 +20,27 @@ export default function RegisterForm() {
     const [isLandLineEmpty, setIsLandLineEmpty] = useState(false);
     const [isCellularPhoneEmpty, setIsCellularPhoneEmpty] = useState(false);
 
-    const [formIsValid, setFormIsValid] = useState(true)
-
 
     function handleEmptyFields() {
-        handleEmptyField(firstName, setIsFirstNameEmpty);
-        handleEmptyField(lastName, setIsLastNameEmpty);
-        handleEmptyField(dateOfBirth, setIsDateOfBirthEmpty);
-        handleEmptyField(address, setIsAddressEmpty);
-        handleEmptyField(city, setIsCityEmpty);
-        handleEmptyField(zipCode, setIsZipCodeEmpty);
-        handleEmptyField(landLine, setIsLandLineEmpty);
-        handleEmptyField(cellularPhone, setIsCellularPhoneEmpty);
+
+         let v1 = handleEmptyField(firstName, setIsFirstNameEmpty);
+         let v2 = handleEmptyField(lastName, setIsLastNameEmpty);
+         let v3 = handleEmptyField(dateOfBirth, setIsDateOfBirthEmpty);
+         let v4 = handleEmptyField(address, setIsAddressEmpty);
+         let v5 = handleEmptyField(city, setIsCityEmpty);
+         let v6 = handleEmptyField(zipCode, setIsZipCodeEmpty);
+         let v7 = handleEmptyField(landLine, setIsLandLineEmpty);
+         let v8 = handleEmptyField(cellularPhone, setIsCellularPhoneEmpty);
+
+         return (v1 || v2 || v3 || v4 || v5 || v6 || v7 || v8);
     }
 
     function handleEmptyField(value, setFunction) {
         if (value === "") {
-            setFormIsValid(false);
             setFunction(true);
+            return true
         } else {
+            return false
             setFunction(false);
         }
     }
@@ -63,13 +64,11 @@ export default function RegisterForm() {
         setIsZipCodeEmpty(false);
         setIsLandLineEmpty(false);
         setIsCellularPhoneEmpty(false);
-        setFormIsValid(true);
     }
 
     function handleFormSubmit(ev) {
         initFromValidation();
-        handleEmptyFields();
-        if (!formIsValid) {
+        if (handleEmptyFields()) {
             ev.preventDefault()
         }
     }
@@ -81,13 +80,13 @@ export default function RegisterForm() {
                     <div className="col-6">
                         <form action="http://localhost:8000/register" method="post">
                             <div className="mb-4">
-                                <label htmlFor="FirstName" className="form-label fw-normal h5">
+                                <label htmlFor="first_name" className="form-label fw-normal h5">
                                     First Name
                                 </label>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    id="exampleInputEmail1"
+                                    id="first_name"
                                     aria-describedby="emailHelp"
                                     name="first_name"
                                     onChange={(ev) => {
@@ -99,13 +98,13 @@ export default function RegisterForm() {
                             </div>
 
                             <div className="mb-4">
-                                <label htmlFor="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="last_name" className="form-label fw-normal h5">
                                     Last Name
                                 </label>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    id="exampleInputEmail1"
+                                    id="last_name"
                                     aria-describedby="emailHelp"
                                     name="last_name"
                                     onChange={(ev) => {
@@ -116,7 +115,7 @@ export default function RegisterForm() {
                                 {renderErrorMessage(isLastNameEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="Date-of-birth" className="form-label fw-normal h5">
                                     Date of birth
                                 </label>
                                 <input
@@ -133,13 +132,13 @@ export default function RegisterForm() {
                                 {renderErrorMessage(isDateOfBirthEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="address" className="form-label fw-normal h5">
                                     Address
                                 </label>
                                 <input
                                     type="text"
                                     className="form-control"
-                                    id="Date-of-birth"
+                                    id="address"
                                     aria-describedby="emailHelp"
                                     name="address"
                                     onChange={(ev) => {
@@ -150,12 +149,13 @@ export default function RegisterForm() {
                                 {renderErrorMessage(isAddressEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="city" className="form-label fw-normal h5">
                                     City
                                 </label>
                                 <select className="form-select"
                                         aria-label="Default select example"
                                         name="city"
+                                        id="city"
                                         onChange={(ev) => {
                                             const value = ev.target.value;
                                             setCity(value);
@@ -168,13 +168,13 @@ export default function RegisterForm() {
                                 {renderErrorMessage(isCityEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="zip_code" className="form-label fw-normal h5">
                                     Zip code
                                 </label>
                                 <input
                                     type="number"
                                     className="form-control"
-                                    id="Date-of-birth"
+                                    id="zip_code"
                                     aria-describedby="emailHelp"
                                     name="zip_code"
                                     onChange={(ev) => {
@@ -185,13 +185,13 @@ export default function RegisterForm() {
                                 {renderErrorMessage(isZipCodeEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="land_line" className="form-label fw-normal h5">
                                     Land line
                                 </label>
                                 <input
                                     type="number"
                                     className="form-control"
-                                    id="Date-of-birth"
+                                    id="land_line"
                                     aria-describedby="emailHelp"
                                     name="land_line"
                                     onChange={(ev) => {
@@ -202,13 +202,13 @@ export default function RegisterForm() {
                                 {renderErrorMessage(isLandLineEmpty)}
                             </div>
                             <div className="mb-4">
-                                <label htmlFor="LastName" className="form-label fw-normal h5">
+                                <label htmlFor="cellular_phone" className="form-label fw-normal h5">
                                     Cellular phone
                                 </label>
                                 <input
                                     type="number"
                                     className="form-control"
-                                    id="Date-of-birth"
+                                    id="cellular_phone"
                                     aria-describedby="emailHelp"
                                     name="cellular_phone"
                                     onChange={(ev) => {
@@ -231,38 +231,38 @@ export default function RegisterForm() {
                                 <div className="card">
                                     <div className="card-body border-3 border border-3 rounded-3">
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="diabetes" />
-                                            <label className="form-check-label" htmlFor="exampleCheck1">
+                                            <input type="checkbox" className="form-check-input" id="Diabetes" name="diabetes" />
+                                            <label className="form-check-label" htmlFor="Diabetes">
                                                 Diabetes
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="Cardio_Vascular" />
-                                            <label className="form-check-label" htmlFor="exampleCheck1">
+                                            <input type="checkbox" className="form-check-input" id="Cardio-Vascular problems" name="Cardio_Vascular" />
+                                            <label className="form-check-label" htmlFor="Cardio-Vascular problems">
                                                 Cardio-Vascular problems
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="cancer" />
-                                            <label className="form-check-label" htmlFor="exampleCheck1">
+                                            <input type="checkbox" className="form-check-input" id="Cancer" name="cancer" />
+                                            <label className="form-check-label" htmlFor="Cancer">
                                                 Cancer
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="obesity" />
-                                            <label className="form-check-label" htmlFor="exampleCheck1">
+                                            <input type="checkbox" className="form-check-input" id="Obesity" name="obesity" />
+                                            <label className="form-check-label" htmlFor="Obesity">
                                                 Obesity
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="MRSA" />
-                                            <label className="form-check-label" htmlFor="exampleCheck1">
+                                            <input type="checkbox" className="form-check-input" id="MRSA" name="MRSA" />
+                                            <label className="form-check-label" htmlFor="MRSA">
                                                 MRSA
                                             </label>
                                         </div>
                                         <div className="mb-3 form-check">
-                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" name="cholesterol" />
-                                            <label className="form-check-label" htmlFor="exampleCheck1">
+                                            <input type="checkbox" className="form-check-input" id="Cholesterol" name="cholesterol" />
+                                            <label className="form-check-label" htmlFor="Cholesterol">
                                                 Cholesterol
                                             </label>
                                         </div>
@@ -270,10 +270,10 @@ export default function RegisterForm() {
                                             <input
                                                 type="checkbox"
                                                 className="form-check-input"
-                                                id="exampleCheck1"
+                                                id="High Blood Pressure"
                                                 name="high_blood_pressure"
                                             />
-                                            <label className="form-check-label" htmlFor="exampleCheck1">
+                                            <label className="form-check-label" htmlFor="High Blood Pressure">
                                                 High Blood Pressure
                                             </label>
                                         </div>
