@@ -4,19 +4,26 @@ from django.shortcuts import redirect, render
 from .models import RegisterForm
 from django.shortcuts import redirect
 from django.http import JsonResponse
-
 def handleFetchFormResults(request):
 
     data = RegisterForm.objects.all()
     
-    for row in data:
-        print(row.first_name)
+    responseDataInfo = []
+    for d in data:
+        responseDataInfo.append({ 
+            'first_name': d.first_name,
+            'last_name': d.last_name, 
+            'date_of_birth': d.date_of_birth,
+            'address': d.address,
+            'city': d.city,
+            'zip_code': d.zip_code,
+            'land_line': d.land_line,
+            'cellular_phone': d.cellular_phone,
+            'been_infected': d.infected_before,
+            'other_conditions': d.other_conditions
+            })
 
-    responseData = {
-        'id': 4,
-        'name': 'Test Response',
-        'roles' : ['Admin','User']
-    }
+    responseData = {'data': responseDataInfo}
 
     return JsonResponse(responseData)
 
