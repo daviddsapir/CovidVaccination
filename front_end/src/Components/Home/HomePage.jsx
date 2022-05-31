@@ -62,7 +62,7 @@ export default function HomePage() {
                   <h5 className="card-title fw-bold">Summary Page</h5>
                   <p className="card-text lead">A tabular view that shows all the existing registration info available</p>
                   <div className="text-center">
-                    <a href="#" className="btn btn-primary border border-5 border-info">
+                    <a href="/SummaryPage" className="btn btn-primary border border-5 border-info">
                       Go To Summary Page
                     </a>
                   </div>
@@ -81,7 +81,7 @@ export default function HomePage() {
                     for learning.
                   </p>
                   <div className="text-center">
-                    <a href="#" className="btn btn-primary border border-5 border-info">
+                    <a href="/StudyJourneyPage" className="btn btn-primary border border-5 border-info">
                       Go To Study Journey
                     </a>
                   </div>
