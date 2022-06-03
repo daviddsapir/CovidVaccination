@@ -17,10 +17,9 @@ git clone https://github.com/daviddsapir/CovidVaccination.git
 
 ```bash
 cd CovidVaccination
-
 ```
 
-<hr />
+#
 
 ## Create a virtual environment
 
@@ -34,17 +33,45 @@ virtualenv env
 
 #
 
-## Activate the virtual environment
+## Build React Project
 
 ```bash
-envname\scripts\activate
+# cd to react project folder
+cd ./front_end
+
+# Run npm install to install and dependence's
+npm install
+
+# Run npm run build to build the project
+npm run build
+
+# go back to project folder
+cd ../
+```
+
+#
+
+## Activate the virtual environment
+
+### MacOS
+
+```bash
+. ./env/scripts/activate
+```
+
+> ⚠ On MacOS we need the "." before the command to specify where we want the virtual environment to work. "." means the current directory.
+
+### windows
+
+```bash
+.\env\scripts\activate
 ```
 
 #
 
 ## Install Django
 
-After complete creating the directory and virtual environtment, it’s time to install Django
+After complete creating the directory and virtual environment, it’s time to install Django
 
 ```bash
 # Let's install django first
@@ -53,7 +80,7 @@ pip install django
 
 #
 
-## Setting up a database server
+## Setting up the database server
 
 <ul>
     <li>Open pgAdmin4</li>
@@ -65,7 +92,7 @@ pip install django
 
 ## Migrate the table to PostgreSQL database
 
-### Mac
+### MacOS
 
 ```bash
 pip install psycopg2-binary

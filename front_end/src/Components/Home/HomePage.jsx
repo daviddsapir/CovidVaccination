@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../NavBar/Navbar";
 
+import vaccination_icon from "../../Images/vaccination_icon.png";
+
 export default function HomePage() {
   const navigate = useNavigate();
 
@@ -9,8 +11,8 @@ export default function HomePage() {
       <header className="m-3">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-6">
-              <div className="h1 text-center">COVID-19 Vaccination</div>
+            <div className="col-6 text-center">
+              <img className="img-fluid" src={vaccination_icon} alt="" style={{width: "500px"}} />
             </div>
           </div>
         </div>
@@ -18,7 +20,7 @@ export default function HomePage() {
 
       <main>
         <div className="container">
-          <div className="row mt-5 mb-4 justify-content-center">
+          <div className="row mt-3 mb-4 justify-content-center">
             <div className="col-6">
               <div className="card border border-5 bg-light">
                 <div className="card-body">
