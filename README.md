@@ -1,4 +1,8 @@
+<div align="center">
+
 # CovidVaccination
+
+</div>
 
 ## Cloning the repository
 
