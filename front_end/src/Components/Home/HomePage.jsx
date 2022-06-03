@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="container">
           <div className="row mt-5 mb-4 justify-content-center">
             <div className="col-6">
-              <div className="card border border-5">
+              <div className="card border border-5 bg-light">
                 <div className="card-body">
                   <h5 className="card-title fw-bold">About Us</h5>
                   <p className="card-text lead">
@@ -36,7 +36,7 @@ export default function HomePage() {
 
           <div className="row justify-content-center my-4">
             <div className="col-6">
-              <div className="card border border-5 border">
+              <div className="card border border-5 border bg-light">
                 <div className="card-body">
                   <h5 className="card-title fw-bold">Register Page</h5>
                   <p className="card-text lead">Fill up a form to Help us collect data in order to prioritize COVID-19 vaccination.</p>
@@ -58,7 +58,7 @@ export default function HomePage() {
           <div className="row justify-content-center my-4">
             <div className="col-6">
               <div className="card border border-5">
-                <div className="card-body">
+                <div className="card-body bg-light">
                   <h5 className="card-title fw-bold">Summary Page</h5>
                   <p className="card-text lead">A tabular view that shows all the existing registration info available</p>
                   <div className="text-center">
@@ -73,7 +73,7 @@ export default function HomePage() {
 
           <div className="row justify-content-center my-4">
             <div className="col-6">
-              <div className="card border border-5 border">
+              <div className="card border border-5 border bg-light">
                 <div className="card-body">
                   <h5 className="card-title fw-bold">Study Journey</h5>
                   <p className="card-text lead">
