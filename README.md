@@ -61,8 +61,6 @@ pip install django
 
 ## Migrate the table to PostgreSQL database
 
-<br />
-
 ### Mac
 
 ```bash
