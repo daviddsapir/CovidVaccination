@@ -6,14 +6,14 @@
 
 ## Cloning the repository
 
---> Clone the repository using the command below :
+#### Clone the repository using the command below :
 
 ```bash
 git clone https://github.com/daviddsapir/CovidVaccination.git
 
 ```
 
---> Move into the directory where we have the project files :
+#### Move into the directory where we have the project files :
 
 ```bash
 cd CovidVaccination
@@ -73,7 +73,7 @@ cd ../
 . ./env/bin/activate
 ```
 
-> ⚠ On MacOS we need the "." before the command to specify where we want the virtual environment to work. "." means the current directory.
+> ⚠ On MacOS we need the "." before the command to specify where we want the virtual environment to run. "." means the current directory.
 
 ### windows
 
