@@ -23,13 +23,13 @@ cd CovidVaccination
 
 ## Create a virtual environment
 
-### Let's install virtualenv first
+#### Let's install virtualenv first
 
 ```bash
 pip install virtualenv
 ```
 
-### Then we create our virtual environment
+#### Then we create our virtual environment
 
 ```bash
 virtualenv env
@@ -39,25 +39,25 @@ virtualenv env
 
 ## Build React Project
 
-### cd to react project folder
+#### cd to react project folder
 
 ```bash
 cd ./front_end
 ```
 
-### Run npm install to install and dependence's
+#### Run npm install to install and dependence's
 
 ```bash
 npm install
 ```
 
-### Run npm run build to build the project
+#### Run npm run build to build the project
 
 ```bash
 npm run build
 ```
 
-### Go back to project folder
+#### Go back to project folder
 
 ```bash
 cd ../
