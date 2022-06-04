@@ -181,3 +181,45 @@ python manage.py runserver
 > ⚠ Then, the development server will be started at http://127.0.0.1:8000/
 
 #
+
+### App Preview :
+
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+    Home page Preview
+</p>
+</p>
+<img src="doc utils/preview/homePage.png">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  Registration page Preview
+</p>
+<img src="doc utils/preview/RegistrationPage.png">  
+</td>
+</table>
+
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+    Form Summary page Preview
+</p>
+</p>
+<img src="doc utils/preview/FormSummaryPage.png">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  Study Journey Page Preview
+</p>
+<img src="doc utils/preview/StudyJourneyPage.png">  
+</td>
+</table>
