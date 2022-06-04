@@ -82,7 +82,7 @@ def handleRegister(request):
         
         # 11
         if "Cardio_Vascular" in request.POST:
-            other_conditions.append('Cardio_Vascular')
+            other_conditions.append('Cardio Vascular')
 
         # 12
         if "cancer" in request.POST:

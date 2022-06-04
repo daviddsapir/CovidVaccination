@@ -145,6 +145,16 @@ python manage.py makemigrations RegistrationForm
 python manage.py migrate
 ```
 
+### Check if the DB migration went well:
+
+<ul> 
+<li> <p>Get back to pgAdmin</p> </li>
+<li> <p>Double click on Tables in paAdmin.</p> </li>
+<li> <p>Now we successfully created our PostgreSQL database, and migrate all tables in our Django project to PostgreSQL</p> </li>
+
+<img src="doc utils/migrationWentWell.png" style="width: 500px"/>
+</ul>
+
 #
 
 ## Running the App
