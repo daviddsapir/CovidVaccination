@@ -6,14 +6,14 @@
 
 ## Cloning the repository
 
-#### Clone the repository using the command below :
+#### Clone the repository using the command below
 
 ```bash
 git clone https://github.com/daviddsapir/CovidVaccination.git
 
 ```
 
-#### Move into the directory where we have the project files :
+#### Move into the directory where we have the project files
 
 ```bash
 cd CovidVaccination
