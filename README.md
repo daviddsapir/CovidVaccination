@@ -1,6 +1,6 @@
 <div align="center">
 
-![Alt text](front_end/src/Images/vaccination_icon.png "Optional title")
+<img src="front_end/src/Images/vaccination_icon.png" style="width: 300px"/>
 
 </div>
 
