@@ -1,6 +1,6 @@
 <div align="center">
 
-# CovidVaccination
+![Alt text](front_end/src/Images/vaccination_icon.png "Optional title")
 
 </div>
 
@@ -85,7 +85,7 @@ pip install django
 <ul>
     <li>Open pgAdmin4</li>
     <li>Click server, and choose PostgreSQL version, in this article, I use version 14</li>
-    <li>Then create our database: name the database: <b>CovidVaccinationDB</b> </li>
+    <li>Then create our database: name the database: <b>CovidVaccinationDB</b></li>
 </ul>
 
 #

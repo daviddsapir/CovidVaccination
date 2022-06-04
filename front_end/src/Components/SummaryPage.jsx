@@ -76,7 +76,7 @@ export default function SummaryPage() {
         <div className="card my-5">
           <div className="card-header bg-primary">
             <p className="mb-0">
-              <b className="h4">Filter by City and Birth Date</b>
+              <b className="h4 text-light">Filter by City and Birth Date</b>
             </p>
           </div>
           <div className="card-body bg-light">
