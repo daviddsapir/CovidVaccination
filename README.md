@@ -87,16 +87,16 @@ pip install django
 <ul>
     <li>Open pgAdmin4</li>
     <li>Click server, and choose PostgreSQL version, in this article, I use version 14</li>
-    <img src="doc utils/create our database name.png" style="width: 300px"/>
+    <img src="doc utils/create our database name.png" style="width: 500px"/>
     <li>Then create our database: name the database: <b>CovidVaccinationDB</b></li>
-    <img src="doc utils/Name the database.png" style="width: 300px"/>
+    <img src="doc utils/Name the database.png" style="width: 500px"/>
 </ul>
 
 ### Get back to our code to config the database
 
 <ul>
     <li> <p>Go to settings.py</p> </li>
-    <img src="doc utils/settings.png" style="width: 300px"/>
+    <img src="doc utils/settings.png" style="width: 500px"/>
     <li> <p>Approximately, in line 82 of code, this is the database config part</p> </li>
     <li> <p> Change the password to your password in Database <br />
             ⚠ If it doesn't work, then change to your corresponding database server config:</p>
