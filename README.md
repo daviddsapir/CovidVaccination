@@ -82,10 +82,43 @@ pip install django
 
 ## Setting up the database server
 
+### create database in pgAdmin4
+
 <ul>
     <li>Open pgAdmin4</li>
     <li>Click server, and choose PostgreSQL version, in this article, I use version 14</li>
+    <img src="doc utils/create our database name.png" style="width: 300px"/>
     <li>Then create our database: name the database: <b>CovidVaccinationDB</b></li>
+    <img src="doc utils/Name the database.png" style="width: 300px"/>
+</ul>
+
+### Get back to our code to config the database
+
+<ul>
+    <li> <p>Go to settings.py</p> </li>
+    <img src="doc utils/settings.png" style="width: 300px"/>
+    <li> <p>Approximately, in line 82 of code, this is the database config part</p> </li>
+    <li> <p> Change the password to your password in Database <br />
+            ⚠ If it doesn't work, then change to your corresponding database server config:</p>
+            <ul>
+                <li> <p>NAME → Database name e.g. dbtest that previously created in pgAdmin</p> </li>
+                <li> <p>USER → Database username (default is postgres)</p> </li>
+                <li> <p>PASSWORD → Database password</p> </li>
+                <li> <p>HOST → Database host (In development stage, use localhost or IP Address 127.0.0.1 also available)</p> </li>
+                <li> <p>PORT → The port that used to run the database (Default port is 5432)</p> </li>
+            </ul>
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'CovidVaccinationDB',
+            'USER': 'postgres',
+            'PASSWORD': '0523244903',
+            'HOST': '127.0.0.1',
+            'PORT': '5432',
+        }
+    }
+
 </ul>
 
 #
