@@ -97,7 +97,7 @@ pip install django
 <ul>
     <li> <p>Go to settings.py</p> </li>
     <img src="doc utils/settings.png" style="width: 500px"/>
-    <li> <p>Approximately, in line 82 of code, this is the database config part</p> </li>
+    <li> <p>Approximately, in line 82 of code, this is the database config part.</p> </li>
     <li> <p> Change the password to your password in Database <br />
             ⚠ If it doesn't work, then change to your corresponding database server config:</p>
             <ul>
