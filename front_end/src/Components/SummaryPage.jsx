@@ -93,10 +93,36 @@ export default function SummaryPage() {
                     setFilterByCity(city);
                   }}
                 >
-                  <option value="none">none</option>
-                  <option value="One">One</option>
-                  <option value="Two">Two</option>
-                  <option value="Three">Three</option>
+                  <option defaultValue="none">none</option>
+                  <option value="Akko">Akko</option>
+                  <option value="Arad">Arad</option>
+                  <option value="Ariel">Ariel</option>
+                  <option value="Ashdod">Ashdod</option>
+                  <option value="Ashkelon">Ashkelon</option>
+                  <option value="Bat Yam">Bat Yam</option>
+                  <option value="Beer Sheva">Beer Sheva</option>
+                  <option value="Beit Shean">Beit Shean	</option>
+                  <option value="Beit Shemesh">Beit Shemesh</option>
+                  <option value="Betar Illit">Betar Illit</option>
+                  <option value="Dimona">Dimona</option>
+                  <option value="Eilat">Eilat</option>
+                  <option value="Elad">Elad</option>
+                  <option value="Givatayim">Givatayim</option>
+                  <option value="Hadera">Hadera</option>
+                  <option value="Haifa">Haifa</option>
+                  <option value="Harish">Harish</option>
+                  <option value="Holon">Holon</option>
+                  <option value="Jerusalem">Jerusalem</option>
+                  <option value="Karmiel">Karmiel</option>
+                  <option value="Maale Adumim">Maale Adumim</option>
+                  <option value="Maalot Tarshiha">Maalot Tarshiha</option>
+                  <option value="Modiin">Modiin</option>
+                  <option value="Nahariya">Nahariya</option>
+                  <option value="Nes Ziona">Nes Ziona</option>
+                  <option value="Ramat-Gan">Ramat-Gan</option>
+                  <option value="Sderot">Sderot</option>
+                  <option value="Tel Aviv">Tel Aviv</option>
+                  <option value="Yokneam">Yokneam</option>
                 </select>
               </div>
               <div className="col-md-4">

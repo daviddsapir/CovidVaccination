@@ -130,7 +130,7 @@ pip install django
 ```bash
 pip install psycopg2-binary
 
-python manage.py makemigrations
+python manage.py makemigrations RegistrationForm
 
 python manage.py migrate
 ```
@@ -140,7 +140,7 @@ python manage.py migrate
 ```bash
 pip install psycopg2
 
-python manage.py makemigrations
+python manage.py makemigrations RegistrationForm
 
 python manage.py migrate
 ```
