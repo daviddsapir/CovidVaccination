@@ -23,11 +23,15 @@ cd CovidVaccination
 
 ## Create a virtual environment
 
-```bash
-# Let's install virtualenv first
-pip install virtualenv
+### Let's install virtualenv first
 
-# Then we create our virtual environment
+```bash
+pip install virtualenv
+```
+
+### Then we create our virtual environment
+
+```bash
 virtualenv env
 ```
 
@@ -35,17 +39,27 @@ virtualenv env
 
 ## Build React Project
 
+### cd to react project folder
+
 ```bash
-# cd to react project folder
 cd ./front_end
+```
 
-# Run npm install to install and dependence's
+### Run npm install to install and dependence's
+
+```bash
 npm install
+```
 
-# Run npm run build to build the project
+### Run npm run build to build the project
+
+```bash
 npm run build
+```
 
-# go back to project folder
+### Go back to project folder
+
+```bash
 cd ../
 ```
 
@@ -74,7 +88,6 @@ cd ../
 After complete creating the directory and virtual environment, it’s time to install Django
 
 ```bash
-# Let's install django first
 pip install django
 ```
 
